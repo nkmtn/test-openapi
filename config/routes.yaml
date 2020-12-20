@@ -1,0 +1,12 @@
+index:
+    path: /
+    controller: App\Controller\MainController::index
+
+test:
+    path: /cabinet/test
+    controller: App\Controller\MainController::test
+
+result:
+    path: /cabinet/result
+    controller: App\Controller\MainController::result
+    methods: ["post"]

@@ -1,0 +1,33 @@
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Your {{ controller_name }}! ✅</h1>
+
+        {% if not app.user %}
+            <a href="/register" class="button is-primary">
+                <strong>Регистрация</strong>
+            </a>
+            <a href="/login" class="button is-light">
+                Войти
+            </a>es
+        {% else %}
+            <div>
+                <h1> Правильных ответов: {{ result }}</h1>
+            </div>
+            <a href="/cabinet/test" class="button is-light">
+                Пройти тест снова
+            </a> <br>
+            <a href="/" class="button is-light">
+                На главную страницу
+            </a> <br>
+            <a href="/logout" class="button is-light">
+                Выйти
+            </a>
+        {% endif %}
+
+    </div>
+{% endblock %}
